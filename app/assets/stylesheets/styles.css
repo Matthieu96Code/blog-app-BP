@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+/* User page and partial */
+
+.user-card {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-card img {
+  border: solid 2px black;
+}
+
+.user-card a {
+  flex-grow: 1;
+  margin: 0 0 0 1rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border: solid 2px black;
+}
+
+.user-card div {
+  align-self: flex-end;
+}
+
+.user-card h2 {
+  align-self: center;
+}
+
+/* Bio section */
+
+.bio-section {
+  margin: 2rem;
+  border: solid 2px black;
+}
+
+.post-card {
+  margin: 0 2rem;
+  border: solid 2px black;
+}
+
+.posts-list {
+  margin: 2rem 0;
+}
+
+.bio-section h2,
+.bio-section div,
+.post-card h2,
+.post-card div {
+  margin: 0.5rem;
+}
+
+.comments-and-likes {
+  text-align: end;
+}
+
+.btn-all-posts,
+.btn-pagination {
+  width: 8rem;
+  height: 2rem;
+  margin: 0 calc(50% - 4rem);
+}
+
+.comments-list,
+.empty-post {
+  margin: 0.5rem 2rem 2rem 2rem;
+  border: solid 2px black;
+}
+
+.posts-show {
+  margin-top: 2rem;
+}

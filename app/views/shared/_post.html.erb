@@ -1,0 +1,7 @@
+<%=link_to user_post_path(post.author, post) do%>
+  <div class=post-card>
+    <h2><%=post.title%></h2>
+    <div><%=post.text[0, 100]%><%='...' if post.text[101]%></div>
+    <div class="comments-and-likes">Comments: <%=post.comments_counter%>, Likes: <%=post.likes_counter%></div>
+  </div>
+<%end%>
