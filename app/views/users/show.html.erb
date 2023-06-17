@@ -1,0 +1,21 @@
+<%= render 'shared/user', user: @current_user%>
+<section class="bio-section">
+  <h2>Bio</h2>
+  <div class="bio-description"><%=@current_user.bio%></div>
+</section>
+
+<section class="posts-section">
+  <ul>
+    <% for post_i in 0...3 do %>
+      <% if !@current_user.most_recent_posts[0]%>
+        <p class="empty-post">No posts</p>
+        <% break if !@current_user.most_recent_posts[post_i]%>
+      <% end %>      
+        <li class="posts-list">
+          <%=render 'shared/post', post: @current_user.most_recent_posts[post_i]%>
+        </li>
+      <%end%>
+  </ul>
+</section >
+
+<button class="btn-all-posts"><%= link_to "See all posts", user_posts_path(@current_user) %></button>
